@@ -8,9 +8,11 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:investments\" \"npm run dev:host\"",
     "dev:host": "npm run dev -w host",
-    "dev:investments": "npm run dev -w investments"
+    "dev:investments": "npm run dev -w investments",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "husky": "^9.0.11"
   }
 }

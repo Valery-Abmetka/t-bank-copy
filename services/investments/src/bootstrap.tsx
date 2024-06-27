@@ -10,7 +10,7 @@ const root = document.getElementById('root');
 if (!root) {
   throw new Error('root not found');
 }
-
+console.log('2');
 const container = createRoot(root);
 
 const router = createBrowserRouter([
