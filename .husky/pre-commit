@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-sh .husky/hooks/custom-pre-commit.sh
+# Вызываем наш скрипт проверки изменений
+.husky/check-changes.sh
