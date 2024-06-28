@@ -14,6 +14,10 @@
     "format": "prettier --no-error-on-unmatched-pattern --write src/**/*.{js,jsx,ts,tsx,scss,md,json} --config ../.prettierrc"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
     "@packages/build-config": "*",
     "@packages/shared": "*",
     "@reduxjs/toolkit": "^2.2.5",
