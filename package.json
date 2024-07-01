@@ -6,9 +6,12 @@
     "services/*"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev:investments\" \"npm run dev:host\"",
+    "dev:app": "concurrently \"npm run dev:investments\" \"npm run dev:host\"",
     "dev:host": "npm run dev -w host",
     "dev:investments": "npm run dev -w investments",
+    "build:investments": "npm run build:prod -w investments",
+    "build:host": "npm run build:prod -w host",
+    "build:app": "concurrently \"npm run build:investments\" \"npm run build:host\"",
     "prepare": "husky"
   },
   "devDependencies": {

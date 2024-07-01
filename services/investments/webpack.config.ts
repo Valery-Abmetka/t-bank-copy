@@ -54,6 +54,18 @@ export default (env: EnvVariables) => {
           eager: true,
           requiredVersion: false,
         },
+        '@reduxjs/toolkit': {
+          eager: true,
+          requiredVersion: false,
+        },
+        'react-redux': {
+          eager: true,
+          requiredVersion: false,
+        },
+        '@packages/shared': {
+          eager: true,
+          requiredVersion: false,
+        },
         '@mui/material': {
           singleton: true,
           requiredVersion: '^5.15.20',
