@@ -1,4 +1,8 @@
-import { BuildMode, BuildPaths, buildWebpack } from '@packages/build-config';
+import {
+  BuildMode,
+  BuildPaths,
+  buildWebpack,
+} from '@packages/build-config';
 import path from 'path';
 import webpack from 'webpack';
 import packageJson from './package.json';
@@ -11,7 +15,12 @@ interface EnvVariables {
 
 export default (env: EnvVariables) => {
   const paths: BuildPaths = {
-    entry: path.resolve(__dirname, 'src', 'index.tsx'),
+    entry: path.resolve(
+      __dirname,
+      'src',
+      'app',
+      'index.tsx',
+    ),
     output: path.resolve(__dirname, 'build'),
     html: path.resolve(__dirname, 'public', 'index.html'),
     public: path.resolve(__dirname, 'public'),
@@ -35,15 +44,33 @@ export default (env: EnvVariables) => {
         ...packageJson.dependencies,
         react: {
           eager: true,
+          requiredVersion: false,
         },
         'react-router-dom': {
           eager: true,
+          requiredVersion: false,
         },
         'react-dom': {
           eager: true,
+          requiredVersion: false,
+        },
+        '@mui/material': {
+          singleton: true,
+          requiredVersion: '^5.15.20',
+          eager: true,
+        },
+        '@emotion/styled': {
+          singleton: true,
+          eager: true,
+          requiredVersion: '^11.11.5',
+        },
+        '@emotion/react': {
+          singleton: true,
+          eager: true,
+          requiredVersion: '^11.11.4',
         },
       },
-    })
+    }),
   );
 
   return config;

@@ -1,24 +1,27 @@
-import { createRoot } from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Suspense, lazy } from "react";
-import { App } from "./components/App/App";
-const About = lazy(() => import("@/pages/about/About"));
+import { createRoot } from 'react-dom/client';
+import {
+  RouterProvider,
+  createBrowserRouter,
+} from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { App } from './components/App/App';
+const About = lazy(() => import('@/pages/about/About'));
 
-const root = document.getElementById("root");
+const root = document.getElementById('root');
 
 if (!root) {
-  throw new Error("root not found");
+  throw new Error('root not found');
 }
 
 const container = createRoot(root);
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "/about",
+        path: '/about',
         element: (
           <Suspense fallback={<div>cjcj</div>}>
             <About />
@@ -26,7 +29,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/shop",
+        path: '/shop',
         element: <div>shop</div>,
       },
     ],

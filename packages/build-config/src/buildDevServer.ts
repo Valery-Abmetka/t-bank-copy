@@ -1,8 +1,10 @@
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
-import { BuildOptions } from "./types/types";
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import { BuildOptions } from './types/types';
 
-export function buildDevServer(options: BuildOptions): DevServerConfiguration {
-  const isDev = options.mode === "development";
+export function buildDevServer(
+  options: BuildOptions,
+): DevServerConfiguration {
+  const isDev = options.mode === 'development';
   return {
     hot: isDev,
     port: options.port ?? 3000,

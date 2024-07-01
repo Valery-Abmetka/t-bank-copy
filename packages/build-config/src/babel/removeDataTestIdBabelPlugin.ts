@@ -1,4 +1,4 @@
-import { PluginItem } from "@babel/core";
+import { PluginItem } from '@babel/core';
 
 export function removeDataTestIdBabelPlugin(): PluginItem {
   return {

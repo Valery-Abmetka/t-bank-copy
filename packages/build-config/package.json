@@ -2,6 +2,11 @@
   "name": "@packages/build-config",
   "version": "1.0.0",
   "main": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 ",
+    "format": "prettier --no-error-on-unmatched-pattern --write 'src/**/*.{js,jsx,ts,tsx,scss,md,json}' --config ../../.prettierrc"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
